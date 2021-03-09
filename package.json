@@ -13,7 +13,11 @@
     "compile:win": "yarn run build && electron-builder build --config electron-builder.js --win",
     "compile:mac": "electron-builder build --config electron-builder.js --mac",
     "build": "node ./bin/build.js",
-    "watch": "node ./bin/watch.js"
+    "watch": "node ./bin/watch.js",
+    "typecheck-main": "tsc --noEmit -p ./src/main/tsconfig.json",
+    "typecheck-preload": "tsc --noEmit -p ./src/preload/tsconfig.json",
+    "typecheck-renderer": "vuedx-typecheck ./src/renderer --no-pretty",
+    "typecheck": "yarn run typecheck-main && yarn run typecheck-preload && yarn run typecheck-renderer"
   },
   "dependencies": {
     "electron-store": "^7.0.2",
