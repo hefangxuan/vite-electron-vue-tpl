@@ -1,8 +1,18 @@
 {
   "name": "vite-electron-vue-tpl",
   "version": "0.0.0",
+  "author": "app",
+  "appName": "Vite Demo",
+  "appId": "hefx.vite_electron_vue_tpl.com",
+  "description": "demo",
+  "main": "main/index.cjs.js",
   "scripts": {
     "buildEnvTypes": "node ./bin/buildEnvTypes.js",
+    "prebuild": "yarn run buildEnvTypes",
+    "precompile": "cross-env MODE=production yarn run build",
+    "compile:win": "yarn run build && electron-builder build --config electron-builder.js --win",
+    "compile:mac": "electron-builder build --config electron-builder.js --mac",
+    "build": "node ./bin/build.js",
     "watch": "node ./bin/watch.js"
   },
   "dependencies": {

@@ -8,7 +8,7 @@
 */
 module.exports.external = [
   'electron',
-  'electron-updater',
+  // 'electron-updater',
   // 'electron-store',
 ];
 
