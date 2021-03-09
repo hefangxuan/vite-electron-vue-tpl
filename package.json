@@ -1,0 +1,25 @@
+{
+  "name": "vite-electron-vue-tpl",
+  "version": "0.0.0",
+  "scripts": {
+    "buildEnvTypes": "node ./bin/buildEnvTypes.js",
+    "watch": "node ./bin/watch.js"
+  },
+  "dependencies": {
+    "electron-store": "^7.0.2",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.1.5",
+    "@vue/compiler-sfc": "^3.0.5",
+    "child_process": "^1.0.2",
+    "chokidar": "^3.5.1",
+    "cross-env": "^7.0.3",
+    "electron": "^12.0.0",
+    "electron-builder": "^22.10.5",
+    "electron-devtools-installer": "^3.1.1",
+    "slash": "^3.0.0",
+    "typescript": "^4.1.3",
+    "vite": "^2.0.5"
+  }
+}
